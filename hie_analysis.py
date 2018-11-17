@@ -1,6 +1,12 @@
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument('file')
+parser.add_argument('na_values')
+args = parser.parse_args()
+
 import pandas as pd
 
-hie = pd.read_csv('1-longitudinal-minimal-data-set-V2.csv', na_values='nd')
+hie = pd.read_csv(args.file, na_values=args.na_values)
 
 from statsmodels.formula.api import MNLogit
 

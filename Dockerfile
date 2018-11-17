@@ -6,6 +6,5 @@ RUN pip install numpy
 RUN pip install pandas
 RUN pip install scipy
 RUN pip install statsmodels
-ADD hie_analysis.py ./hie_analysis.py
-ADD 1-longitudinal-minimal-data-set-V2.csv ./1-longitudinal-minimal-data-set-V2.csv
-ENTRYPOINT ["python","./hie_analysis.py"]
+ADD hie_analysis.py /simon/hie_analysis.py
+ENTRYPOINT ["python", "/simon/hie_analysis.py"]
